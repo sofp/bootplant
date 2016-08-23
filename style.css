@@ -1,0 +1,413 @@
+/* -*- coding: utf-8 -*- 
+Theme Name: Bootplant
+Author: R.Sato
+Author URI: http://www.sofplant.com
+Theme URI: http://www.sofplant.com/bootplant/
+Version: 1.0.0
+Description: sofplant
+License: GNU General Public License 3.0
+License URI: license.txt
+Text Domain: Bootplant
+*/
+
+/* フォントを強制的にJp仕様に */
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic);
+
+body{
+	font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+	font-weight: 500;
+}
+
+/* 画面topに合わせる設定 */
+.navbar-fixed-top {
+    top: initial;
+}
+
+/* トップスライダーのキャッチコピー部の背景に透過黒 */
+.carousel-caption.caption-bg {
+    background: rgba(0, 0, 0, 0.3);
+	padding-top: 0px;
+}
+
+.carousel-caption h2 {
+	font-size: 20px;
+}
+
+@media (min-width: 768px) {
+	.carousel-caption h2 {
+		font-size: 30px;
+	}
+}
+
+@media (min-width: 768px) {
+
+	/* メニューの階層構造に対応
+	 * http://stackoverflow.com/questions/18023493/bootstrap-3-dropdown-sub-menu-missing
+	 */
+	.dropdown-submenu {
+		position: relative;
+	}
+
+	.dropdown-submenu>.dropdown-menu {
+		top: 100%;
+		left: 0px;
+		margin-top: -6px;
+		margin-left: -1px;
+		-webkit-border-radius: 0 6px 6px 6px;
+		-moz-border-radius: 0 6px 6px;
+		border-radius: 0 6px 6px 6px;
+	}
+
+	.dropdown-submenu:hover>.dropdown-menu {
+		display: block;
+	}
+
+	.dropdown-submenu>a:after {
+		display: block;
+		content: " ";
+		float: right;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+		border-width: 5px 0 5px 5px;
+		border-left-color: #cccccc;
+		margin-top: 5px;
+		margin-right: -10px;
+	}
+
+	.dropdown-submenu:hover>a:after {
+		border-left-color: #ffffff;
+	}
+
+	.dropdown-submenu.pull-left {
+		float: none;
+	}
+
+	.dropdown-submenu.pull-left>.dropdown-menu {
+		left: -100%;
+		margin-left: 10px;
+		-webkit-border-radius: 6px 0 6px 6px;
+		-moz-border-radius: 6px 0 6px 6px;
+		border-radius: 6px 0 6px 6px;
+	}
+
+/* --- 階層構造対応ここまで */
+
+}
+
+
+@media (min-width: 768px) {
+	.nav button.dropdown-toggle {
+		display: none;
+	}
+}
+
+.dropdown-toggle {
+    position: absolute;
+    z-index: 9;
+    right: 0;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background: #999999;
+}
+
+/* add 20160711 */
+
+.service-cons {
+	font-size: 80px;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.service-cons {
+		margin-top: 30px;
+	}
+}
+section.bg-green {
+
+	background-color: #009140;
+	color: #ffffff;
+}
+
+@media (max-width: 768px) {
+	.jumbotron {
+		padding: 18px;
+		
+	}
+	.jumbotron p {
+		font-size: 18px;
+	}
+}
+
+footer p {
+	margin: 0px;
+}
+
+/* Sticky Post
+------------------------------*/
+.sticky .entry-title {
+	padding-left: 20px;
+	position: relative;
+}
+
+.sticky .entry-title:after {
+	content: "\f276";
+	display: inline-block;
+	font-family: "FontAwesome";
+	font-style: normal;
+	font-weight: normal;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	left: 0px;
+	top: 2px;
+	font-size: 22px;
+	color: #aaaaaa;
+}
+
+
+/* WordPress caption style
+------------------------------*/
+.wp-caption {
+	max-width: 100%;
+	font-style: italic;
+	line-height: 1.35;
+	margin-bottom: 15px;
+	margin-top: 5px;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	max-width: 100%;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 10px 0px;
+}
+
+.wp-caption-text,
+.entry-thumbnail-caption,
+.cycle-caption {
+	font-style: italic;
+	line-height: 1.35;
+	font-size: 13px;
+}
+
+/* WordPress Gallery
+------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*------------------------------
+	2.9 Alignments
+------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 3.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 3.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bypostauthor {
+	margin: 0;
+}
+
+/*------------------------------
+	2.8 Accessibility
+------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f8f9f9;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	clip: auto !important;
+	color: #03c4eb;
+	display: block;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 17px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar */
+}
+
+/* add 20160816 */
+.container .article {
+	padding: 10px 20px;
+
+	margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+	border-color: #ddd;
+}
+
+.container .article .content {
+	padding: 10px 20px;
+}
+
+
+.article h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 2em 0 2em;
+    padding: .4em 0 .4em .1em;
+    position: relative;
+    border-bottom: 2px solid #ccc;
+}
+
+.article img {
+    margin-bottom: 2.2em;
+    box-sizing: content-box;
+    padding: 2px;
+    border: 1px solid #ddd;
+}
+
+.article h3.archive-title {
+	margin: 0px 0px;
+}
+
+.article .date {
+	text-align: right;
+}
+
+.lp-item {
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+
+.lp-item p {
+	font-size: 1.2em;
+}
+
+.fa-6 {
+    font-size: 19em;
+}
+
+.fa-3 {
+    font-size: 16em;
+}
+
+
+.wp-blue {
+	color: #21759b;
+}
+
+.sofp-green {
+	color: #8edb34;
+}
+
+.dark-green {
+	color: #009140
+}
+
+.gray {
+	color: #aaa;
+}
+
+.orange {
+	color: #f28b00;
+}
+
+.pink {
+	color: #f26c63;
+}
+
+.jumbotron p {
+	font-weight: 500;
+}
+
+.footer-block {
+	color: #fff;
+	background-color: #777;
+	padding: 50px 20px;
+}
+
+.footer-block ul {
+	margin-left: -40px;
+}
+
+.footer-block a {
+	color: #fff;
+}
+
+.footer-block ul li {
+	list-style: none;
+}
