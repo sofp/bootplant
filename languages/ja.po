@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: wp-first-sofplant-theme\n"
+"Project-Id-Version: bootplant\n"
 "Report-Msgid-Bugs-To: http://www.sofplant.com/\n"
 "POT-Creation-Date: 2015-10-07 03:12:53+00:00\n"
 "MIME-Version: 1.0\n"
@@ -9,11 +9,9 @@ msgstr ""
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 
 
-#: ../theme-init.php:7
-msgid "Slides"
-msgstr "スライド"
 
-msgid "Content Block"
-msgstr "コンテンツブロック"
-
-
+#: comments.php:23
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%2$sへの%1$s件のフィードバック"

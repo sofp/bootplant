@@ -32,15 +32,14 @@ if ( post_password_required() ) {
 
 <?php // twentyfifteen_comment_nav(); ?>
 
-		<ol class="comment-list">
+		<ul class="comment-list">
 			<?php
 				wp_list_comments( array(
-					'style'       => 'ol',
+					'style'       => 'ul',
 					'short_ping'  => true,
-					'avatar_size' => 56,
 				) );
 			?>
-		</ol><!-- .comment-list -->
+		</ul><!-- .comment-list -->
 
 <?php // twentyfifteen_comment_nav(); ?>
 

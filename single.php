@@ -23,20 +23,28 @@
 	  <div class="article">
 		<?php while ( have_posts() ) : the_post(); ?>
 		<?php get_template_part( 'template-parts/content', 'single' . get_post_format() ); ?>
+		<?php
+		// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) {
+				comments_template();
+			}
+		?>
 		<?php endwhile; ?>
 	  </div>
     </div>
     <div class="col-md-4">
-	  <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
-	  <div class="panel panel-default">
-		<div class="panel-heading">
-		  Menu
+	  <div class="sidebar">
+		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			Menu
+		  </div>
+		  <ul class="nav nav-pills nav-stacked">
+			<?php wp_list_pages('title_li='); ?>
+		  </ul>
 		</div>
-		<ul class="nav nav-pills nav-stacked">
-		  <?php wp_list_pages('title_li='); ?>
-		</ul>
+		<?php endif; ?>
 	  </div>
-	  <?php endif; ?>
 	</div>
     <!-- Content Column -->
     
