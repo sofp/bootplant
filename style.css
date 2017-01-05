@@ -484,3 +484,8 @@ footer p {
 .sidebar .panel ul {
 	margin-top: 10px;
 }
+
+#header .form-control {
+	display: inline;
+	width: auto;
+}

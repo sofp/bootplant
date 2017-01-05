@@ -31,7 +31,7 @@
 
 	  <div class="container">
 		<div class="col-lg-12">
-		  <h2 class="page-header">お知らせ</h2>
+		  <h2 class="page-header">最新情報</h2>
           
 <?php 
 // The Query

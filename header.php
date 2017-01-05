@@ -9,24 +9,25 @@
   </head>
   <body <?php body_class(); ?>>
     <div id="header">
+      <!-- <nav class="navbar navbar-inverse navbar-fixed-top">-->
       <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <?php bootplant_header_logo(); ?>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <?php
-             bootplant_nav_menu( array('theme_location' => 'header-right'));
-          ?>
-        </div><!-- /.container-fluid -->
+		<div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <?php bootplant_header_logo(); ?>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <?php bootplant_nav_menu( array('theme_location' => 'header-right')); ?>
+          <form class="navbar-form navbar-right" action="<?php echo home_url('/'); ?>">
+            <input type="text" name="s" class="form-control" placeholder="Search...">
+	        <button type="submit" class="btn btn-success">Search</button>
+          </form>
+        </div>
       </nav>
+
     </div><!-- /.header -->
     <div class="margin" style="height: 50px;">&nbsp;</div>

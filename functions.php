@@ -117,7 +117,8 @@ add_action( 'after_setup_theme', 'bootplant_one_setup' );
 require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 function bootplant_nav_menu($args)  {
-    $args['container_class'] = 'collapse navbar-collapse bs-example-navbar-collapse-1';
+	$args['container'] = '';
+    // $args['container_class'] = 'collapse navbar-collapse bs-example-navbar-collapse-1';
     $args['menu_class'] = 'nav navbar-nav';
     $args['fallback_cb'] = 'wp_bootstrap_navwalker::fallback';
     $args['walker'] = new wp_bootstrap_navwalker();

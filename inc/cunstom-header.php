@@ -32,7 +32,7 @@ function softone_wp_head_cb() {
 
 function bootplant_header_logo() {
     ?>
-<div id="logo">
+<span id="logo">
   <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
     <?php if ( get_header_image() ) { ?>
     <img src="<?php header_image(); ?>" alt="logo" height="50" />
@@ -40,7 +40,7 @@ function bootplant_header_logo() {
     <span style="color: #8edb34"><i class="fa fa-leaf"></i> Sof</span>plant
     <?php }  ?>
   </a>
-</div>
+</span>
     <?php
 }
 
